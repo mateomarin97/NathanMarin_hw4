@@ -1,0 +1,8 @@
+cuerda.gif : animacion.py datos.dat
+	python animacion.py
+datos.dat : cuerda.x
+	./cuerda.x > datos.dat
+cuerda.x : cuerda.c
+	gcc cuerda.c -lm -o cuerda.x
+clear :
+	rm -f cuerda.x datos.dat cuerda.gif
